@@ -1,4 +1,4 @@
-# BestyFLow(give.css)
+# give.css (Separated)
 ###### Multiple classes = Shape your styles + Make/edit your web pages faster
 
 # How to use give.css?
