@@ -45,10 +45,10 @@
   text-transform: capitalize;
 }
 .gv-align-left {
-  text-align: left;
+  text-align: right;
 }
 .gv-align-right {
-  text-align: right;
+  text-align: left;
 }
 .gv-align-center {
   text-align: center;
@@ -127,16 +127,16 @@
   margin-top: 1rem;
 }
 .gv-margin-right {
-  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 .gv-margin-right-lg {
-  margin-right: 4rem;
+  margin-left: 4rem;
 }
 .gv-margin-right-md {
-  margin-right: 3rem;
+  margin-left: 3rem;
 }
 .gv-margin-right-sm {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .gv-margin-bottom {
   margin-bottom: 1.5rem;
@@ -151,16 +151,16 @@
   margin-bottom: 1rem;
 }
 .gv-margin-left {
-  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 .gv-margin-left-lg {
-  margin-left: 4rem;
+  margin-right: 4rem;
 }
 .gv-margin-left-md {
-  margin-left: 3rem;
+  margin-right: 3rem;
 }
 .gv-margin-left-sm {
-  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .gv-padding {
   padding: 1.5rem;
@@ -219,16 +219,16 @@
   padding-top: 1rem;
 }
 .gv-padding-right {
-  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 .gv-padding-right-lg {
-  padding-right: 4rem;
+  padding-left: 4rem;
 }
 .gv-padding-right-md {
-  padding-right: 3rem;
+  padding-left: 3rem;
 }
 .gv-padding-right-sm {
-  padding-right: 1rem;
+  padding-left: 1rem;
 }
 .gv-padding-bottom {
   padding-bottom: 1.5rem;
@@ -243,16 +243,16 @@
   padding-bottom: 1rem;
 }
 .gv-padding-left {
-  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .gv-padding-left-lg {
-  padding-left: 4rem;
+  padding-right: 4rem;
 }
 .gv-padding-left-md {
-  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .gv-padding-left-sm {
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .gv-border {
   border: 0.2rem solid #ddd;
@@ -330,10 +330,10 @@
   border-radius: 50%;
 }
 .gv-float-left {
-  float: left;
+  float: right;
 }
 .gv-float-right {
-  float: right;
+  float: left;
 }
 .gv-clear {
   clear: both;
@@ -409,10 +409,10 @@
   list-style: decimal;
 }
 .gv-rtl {
-  direction: rtl;
+  direction: ltr;
 }
 .gv-ltr {
-  direction: ltr;
+  direction: rtl;
 }
 .gv-no-padding {
   padding: 0;
@@ -503,7 +503,7 @@
 }
 .gv-position-default {
   top: 0;
-  left: 0;
+  right: 0;
 }
 .gv-ovflow-visible {
   overflow: visible;

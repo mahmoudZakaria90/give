@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
+var autoprefixer = require('gulp-autoprefixer')
 var connect = require('gulp-connect');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -9,27 +10,20 @@ var csso = require('gulp-csso');
 
 //sass-en
 gulp.task('sass', function () {
-   sass('./src/sass/en/*.sass',{style:'expanded'})
+   sass('./src/sass/*.sass',{style:'expanded'})
     .on('error', sass.logError)
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('./public/css'))
     .pipe(connect.reload())
-    .pipe(gulp.dest('./public/css'));
 });
 
-//sass-ar
-gulp.task('sass-ar', function () {   
-   sass('./src/sass/ar/*.sass',{style:'expanded'})
-    .on('error', sass.logError)
-    .pipe(connect.reload())
-    .pipe(gulp.dest('./public/css'));
-});
+
 
 //watch 
 gulp.task('watch',function(){
-	gulp.watch('./src/sass/en/*.sass',['sass'])
- 	gulp.watch('./src/sass/ar/*.sass',['sass-ar'])
+	gulp.watch('./src/sass/*.sass',['sass'])
 	gulp.watch('./public/**/*.html',['html'])
 	gulp.watch('./src/js/script.js',['browserify'])
-    gulp.watch('./src/js/**.js',['lint'])
 })
 
 
@@ -66,12 +60,13 @@ gulp.task('server',function(){
 	})
 })
 
-
 //css minify
-gulp.task('csso', function () {
+gulp.task('mini-css', function () {
     return gulp.src('./public/css/*.css')
         .pipe(csso())
         .pipe(gulp.dest('./public/css/'));
 });
+
+
 //default
-gulp.task('default',['watch','server','browserify','sass','sass-ar','csso'])
+gulp.task('default',['watch','server','browserify','sass','mini-css'])
